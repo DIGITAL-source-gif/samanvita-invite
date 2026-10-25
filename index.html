@@ -632,7 +632,7 @@ footer .contact{margin-top:12px;color:var(--muted)}
   <div class="wrap">
     <p class="with-love">With love &amp; blessings</p>
     <p class="family"><span data-bind="familySignature"></span></p>
-    <p class="contact">For any queries: <a id="contactLink"></a></p>
+        <p class="contact">For enquiries, please call:<br><a id="contactLink"></a> &nbsp;|&nbsp; <a id="contactLink2"></a></p>
   </div>
 </footer>
 
@@ -671,7 +671,8 @@ const CONFIG = {
 
   rsvpDeadline: "December 10, 2026",
   maxGuests:    10,
-  contactPhone: "+1 555 123 4567",
+  contactPhone: "3174456135",
+  contactPhone2:"3174456394",
 
   // Background music: put your song file next to index.html and name it here
   // (e.g. "Ra Ra Bangaram-SenSongsMp3.Co.mp3"). Leave empty for no music.
@@ -730,6 +731,9 @@ const CONFIG = {
   const cl = $("#contactLink");
   cl.textContent = CONFIG.contactPhone;
   cl.href = "tel:" + CONFIG.contactPhone.replace(/[^\d+]/g, "");
+  const cl2 = $("#contactLink2");
+  cl2.textContent = CONFIG.contactPhone2;
+  cl2.href = "tel:" + CONFIG.contactPhone2.replace(/[^\d+]/g, "");
 
   /* ---------- Background music ---------- */
   // Browsers only allow audio after a tap, so music starts with "Open Invitation"
